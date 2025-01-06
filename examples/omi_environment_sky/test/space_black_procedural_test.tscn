@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6g1vwkov857o"]
+
+[ext_resource type="PackedScene" uid="uid://dfb4hthdq0qcx" path="res://examples/omi_environment_sky/gltf/space_black_procedural.gltf" id="1_3robk"]
+
+[node name="SpaceBlackProceduralTest" type="Node3D"]
+
+[node name="space_black_procedural" parent="." instance=ExtResource("1_3robk")]
