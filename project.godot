@@ -26,7 +26,7 @@ window/size/viewport_height=1440
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gltf_khr_xmp_copyright/plugin.cfg", "res://addons/omi_extensions/plugin.cfg")
+enabled=PackedStringArray("res://addons/gltf_khr_transform_inheritance/plugin.cfg", "res://addons/gltf_khr_xmp_copyright/plugin.cfg", "res://addons/omi_extensions/plugin.cfg")
 
 [input]
 
