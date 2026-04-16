@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuciefyjhr7te"]
+[gd_scene format=3 uid="uid://cuciefyjhr7te"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ff6tt"]
 
@@ -19,16 +19,16 @@ sky = SubResource("Sky_kmbk4")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="SpaceBlackGradient" type="Node3D"]
+[node name="SpaceBlackGradient" type="Node3D" unique_id=93759711]
 
-[node name="Box" type="MeshInstance3D" parent="."]
+[node name="Box" type="MeshInstance3D" parent="." unique_id=1208440928]
 mesh = SubResource("BoxMesh_ff6tt")
 
-[node name="SunDimRed" type="DirectionalLight3D" parent="."]
+[node name="SunDimRed" type="DirectionalLight3D" parent="." unique_id=340305710]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 light_color = Color(1, 0.25, 0.25, 1)
 light_energy = 0.5
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1433552154]
 environment = SubResource("Environment_bg8fy")

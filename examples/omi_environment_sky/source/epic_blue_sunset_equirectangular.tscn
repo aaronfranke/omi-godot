@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://corat7rkjodso"]
+[gd_scene format=3 uid="uid://corat7rkjodso"]
 
 [ext_resource type="Texture2D" uid="uid://bqek7qwb7ambc" path="res://examples/omi_environment_sky/source/allskyfree_epic_blue_sunset.png" id="1_u0ej6"]
 
@@ -16,14 +16,14 @@ sky = SubResource("Sky_t5uf1")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="EpicBlueSunsetEquirectangular" type="Node3D"]
+[node name="EpicBlueSunsetEquirectangular" type="Node3D" unique_id=528357116]
 
-[node name="Box" type="MeshInstance3D" parent="."]
+[node name="Box" type="MeshInstance3D" parent="." unique_id=597229073]
 mesh = SubResource("BoxMesh_73big")
 
-[node name="Sun" type="DirectionalLight3D" parent="."]
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=991545464]
 transform = Transform3D(1, 0, 0, 0, 0.997564, 0.0697565, 0, -0.0697565, 0.997564, 0, 0, 0)
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1380340615]
 environment = SubResource("Environment_68xnx")

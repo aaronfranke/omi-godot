@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ci6mmo25jlpo2"]
+[gd_scene format=3 uid="uid://ci6mmo25jlpo2"]
 
 [ext_resource type="PackedScene" uid="uid://bmbkstugq3cyh" path="res://examples/test_space_environment.tscn" id="1_5nxgo"]
 [ext_resource type="PackedScene" uid="uid://cwnqk815f83vx" path="res://examples/omi_vehicle/gltf/low_poly_space_station/low_poly_space_station.gltf" id="2_1dwbt"]
@@ -8,47 +8,47 @@
 [ext_resource type="PackedScene" uid="uid://bm08gpxby4g2w" path="res://examples/omi_vehicle/gltf/rocket_ship/rocket_ship.gltf" id="6_y7s1j"]
 [ext_resource type="PackedScene" uid="uid://b3pg7oc65ty0b" path="res://examples/omi_vehicle/test/single/rocket_ship_station/rocket_ship_thruster_particles.tscn" id="8_yteju"]
 
-[node name="SpaceShipAndStation" type="Node3D"]
+[node name="SpaceShipAndStation" type="Node3D" unique_id=1950353933]
 
-[node name="TestSpaceEnvironment" parent="." instance=ExtResource("1_5nxgo")]
+[node name="TestSpaceEnvironment" parent="." unique_id=1667719219 instance=ExtResource("1_5nxgo")]
 
-[node name="SpaceStationBody" parent="." instance=ExtResource("2_1dwbt")]
+[node name="SpaceStationBody" parent="." unique_id=1518225763 instance=ExtResource("2_1dwbt")]
 
-[node name="AstronautPlayer" parent="." instance=ExtResource("3_kc33a")]
+[node name="AstronautPlayer" parent="." unique_id=1458114841 instance=ExtResource("3_kc33a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.10541)
 
-[node name="SimpleSpaceshipBody" parent="." instance=ExtResource("3_wp5ra")]
+[node name="SimpleSpaceshipBody" parent="." unique_id=1068508503 instance=ExtResource("3_wp5ra")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -20)
 can_sleep = false
 
-[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipBottomThruster" index="0" instance=ExtResource("4_duicr")]
+[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipBottomThruster" parent_id_path=PackedInt32Array(1068508503, 1018297735) index="0" unique_id=1043494675 instance=ExtResource("4_duicr")]
 amount_ratio = 0.0
 
-[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipMainThrusterLeft" index="0" instance=ExtResource("4_duicr")]
+[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipMainThrusterLeft" parent_id_path=PackedInt32Array(1068508503, 1016598660) index="0" unique_id=384261712 instance=ExtResource("4_duicr")]
 amount_ratio = 0.0
 
-[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipMainThrusterRight" index="0" instance=ExtResource("4_duicr")]
+[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipMainThrusterRight" parent_id_path=PackedInt32Array(1068508503, 471314273) index="0" unique_id=232137692 instance=ExtResource("4_duicr")]
 amount_ratio = 0.0
 
-[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipReverseThrusterLeft" index="0" instance=ExtResource("4_duicr")]
+[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipReverseThrusterLeft" parent_id_path=PackedInt32Array(1068508503, 1025684392) index="0" unique_id=573415402 instance=ExtResource("4_duicr")]
 amount_ratio = 0.0
 
-[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipReverseThrusterRight" index="0" instance=ExtResource("4_duicr")]
+[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipReverseThrusterRight" parent_id_path=PackedInt32Array(1068508503, 161614060) index="0" unique_id=82944472 instance=ExtResource("4_duicr")]
 amount_ratio = 0.0
 
-[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipSideThrusterLeft" index="0" instance=ExtResource("4_duicr")]
+[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipSideThrusterLeft" parent_id_path=PackedInt32Array(1068508503, 240689474) index="0" unique_id=1750618634 instance=ExtResource("4_duicr")]
 amount_ratio = 0.0
 
-[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipSideThrusterRight" index="0" instance=ExtResource("4_duicr")]
+[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipSideThrusterRight" parent_id_path=PackedInt32Array(1068508503, 1871820939) index="0" unique_id=279385167 instance=ExtResource("4_duicr")]
 amount_ratio = 0.0
 
-[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipTopThruster" index="0" instance=ExtResource("4_duicr")]
+[node name="SpaceshipThrusterParticles" parent="SimpleSpaceshipBody/SimpleSpaceshipTopThruster" parent_id_path=PackedInt32Array(1068508503, 1041196435) index="0" unique_id=1074966875 instance=ExtResource("4_duicr")]
 amount_ratio = 0.0
 
-[node name="RocketShipBody" parent="." instance=ExtResource("6_y7s1j")]
+[node name="RocketShipBody" parent="." unique_id=42206610 instance=ExtResource("6_y7s1j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -20)
 
-[node name="RocketShipThrusterParticles" parent="RocketShipBody/RocketShipThruster" index="0" instance=ExtResource("8_yteju")]
+[node name="RocketShipThrusterParticles" parent="RocketShipBody/RocketShipThruster" parent_id_path=PackedInt32Array(42206610, 2119708131) index="0" unique_id=1741674314 instance=ExtResource("8_yteju")]
 amount_ratio = 0.0
 
 [editable path="SimpleSpaceshipBody"]

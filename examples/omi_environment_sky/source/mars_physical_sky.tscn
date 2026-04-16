@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://o1tn4a8tk648"]
+[gd_scene format=3 uid="uid://o1tn4a8tk648"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gpb6a"]
 
@@ -17,10 +17,10 @@ sky = SubResource("Sky_370m4")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="MarsPhysicalSky" type="Node3D"]
+[node name="MarsPhysicalSky" type="Node3D" unique_id=624384249]
 
-[node name="Box" type="MeshInstance3D" parent="."]
+[node name="Box" type="MeshInstance3D" parent="." unique_id=220194212]
 mesh = SubResource("BoxMesh_gpb6a")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=108152336]
 environment = SubResource("Environment_aewbv")

@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://c60hy356x1vfn"]
+[gd_scene format=4 uid="uid://c60hy356x1vfn"]
 
-[ext_resource type="Script" uid="uid://digm3y42mikqe" path="res://addons/omi_extensions/vehicle/nodes/piloted_vehicle_body_3d.gd" id="1_yd6sw"]
+[ext_resource type="Script" uid="uid://dsg8y3be81je4" path="res://addons/omi_extensions/vehicle/nodes/piloted_vehicle_body_3d.gd" id="1_yd6sw"]
 [ext_resource type="Texture2D" uid="uid://msnktntaysgn" path="res://examples/omi_vehicle/source/rocket_ship_RocketShip_BaseColor.png" id="2_ep1pm"]
-[ext_resource type="Script" uid="uid://8gmos7qh4x83" path="res://addons/omi_extensions/vehicle/nodes/vehicle_thruster_3d.gd" id="3_ijsqw"]
-[ext_resource type="Script" uid="uid://ci1jce7fwkldv" path="res://addons/omi_extensions/vehicle/nodes/pilot_seat_3d.gd" id="4_h40gw"]
+[ext_resource type="Script" uid="uid://b56hcdhu7tpsa" path="res://addons/omi_extensions/vehicle/nodes/vehicle_thruster_3d.gd" id="3_ijsqw"]
+[ext_resource type="Script" uid="uid://cugcftyucb03o" path="res://addons/omi_extensions/vehicle/nodes/pilot_seat_3d.gd" id="4_h40gw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cqufy"]
 resource_name = "RocketShipMaterial"
@@ -56,46 +56,45 @@ points = PackedVector3Array(-0.619359, -1.49513, 0.689894, 0.619066, -1.49513, 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_48flc"]
 size = Vector3(1, 2, 1)
 
-[node name="RocketShipBody" type="VehicleBody3D" node_paths=PackedStringArray("pilot_seat_node")]
+[node name="RocketShipBody" type="VehicleBody3D" unique_id=1111829432 node_paths=PackedStringArray("pilot_seat_node")]
 mass = 20000.0
 script = ExtResource("1_yd6sw")
 gyroscope_torque = Vector3(10000, 10000, 10000)
 pilot_seat_node = NodePath("RocketShipPilotSeat3D")
 use_throttle = true
 
-[node name="RocketShipMesh" type="MeshInstance3D" parent="."]
+[node name="RocketShipMesh" type="MeshInstance3D" parent="." unique_id=530959527]
 mesh = SubResource("ArrayMesh_2ummv")
-skeleton = NodePath("")
 
-[node name="RocketShipShapeAntenna" type="CollisionShape3D" parent="."]
+[node name="RocketShipShapeAntenna" type="CollisionShape3D" parent="." unique_id=1749400831]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 4.72)
 shape = SubResource("CapsuleShape3D_m7lbq")
 
-[node name="RocketShipShapeFinLeft" type="CollisionShape3D" parent="."]
+[node name="RocketShipShapeFinLeft" type="CollisionShape3D" parent="." unique_id=751555222]
 transform = Transform3D(-0.5, 0.866025, 0, -0.866025, -0.5, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_85dpq")
 
-[node name="RocketShipShapeFinRight" type="CollisionShape3D" parent="."]
+[node name="RocketShipShapeFinRight" type="CollisionShape3D" parent="." unique_id=1667143679]
 transform = Transform3D(-0.5, -0.866025, 0, 0.866025, -0.5, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_85dpq")
 
-[node name="RocketShipShapeFinTop" type="CollisionShape3D" parent="."]
+[node name="RocketShipShapeFinTop" type="CollisionShape3D" parent="." unique_id=497896055]
 shape = SubResource("ConvexPolygonShape3D_85dpq")
 
-[node name="RocketShipShapeMainHull" type="CollisionShape3D" parent="."]
+[node name="RocketShipShapeMainHull" type="CollisionShape3D" parent="." unique_id=1751372634]
 shape = SubResource("ConvexPolygonShape3D_6llia")
 
-[node name="RocketShipThruster" type="Node3D" parent="."]
+[node name="RocketShipThruster" type="Node3D" parent="." unique_id=437398734]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.8)
 script = ExtResource("3_ijsqw")
-max_force = 50000.0
 max_gimbal_radians = 0.125
+max_force = 50000.0
 
-[node name="RocketShipPilotSeat3D" type="Area3D" parent="." node_paths=PackedStringArray("piloted_vehicle_node")]
+[node name="RocketShipPilotSeat3D" type="Area3D" parent="." unique_id=1984384591 node_paths=PackedStringArray("piloted_vehicle_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 script = ExtResource("4_h40gw")
 piloted_vehicle_node = NodePath("..")
 
-[node name="RocketShipPilotSeatShape" type="CollisionShape3D" parent="RocketShipPilotSeat3D"]
+[node name="RocketShipPilotSeatShape" type="CollisionShape3D" parent="RocketShipPilotSeat3D" unique_id=1025550447]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_48flc")

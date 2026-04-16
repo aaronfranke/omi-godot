@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3pg7oc65ty0b"]
+[gd_scene format=3 uid="uid://b3pg7oc65ty0b"]
 
 [sub_resource type="Curve" id="Curve_816ct"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -28,7 +28,7 @@ albedo_color = Color(0, 1, 1, 1)
 material = SubResource("StandardMaterial3D_caxr0")
 size = Vector3(0.2, 0.2, 0.2)
 
-[node name="RocketShipThrusterParticles" type="GPUParticles3D"]
+[node name="RocketShipThrusterParticles" type="GPUParticles3D" unique_id=1494726416]
 amount = 32
 lifetime = 0.1
 local_coords = true

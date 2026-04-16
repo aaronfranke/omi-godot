@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmbkstugq3cyh"]
+[gd_scene format=3 uid="uid://bmbkstugq3cyh"]
 
-[ext_resource type="Script" uid="uid://ps5nycpefm3h" path="res://addons/omi_extensions/physics_gravity/global_gravity_setter.gd" id="1_5eiqc"]
+[ext_resource type="Script" uid="uid://bnto8bpyqdgb2" path="res://addons/omi_extensions/physics_gravity/global_gravity_setter.gd" id="1_5eiqc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6ujne"]
 sky_top_color = Color(0.0117647, 0.0117647, 0.0117647, 1)
@@ -18,12 +18,12 @@ background_mode = 2
 sky = SubResource("Sky_3ftm5")
 tonemap_mode = 2
 
-[node name="TestSpaceEnvironment" type="WorldEnvironment"]
+[node name="TestSpaceEnvironment" type="WorldEnvironment" unique_id=204185946]
 environment = SubResource("Environment_88n3p")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1552029665]
 transform = Transform3D(-0.866024, -0.433016, 0.25, 0, 0.5, 0.866026, -0.5, 0.75, -0.43301, 0, 0, 0)
 
-[node name="GlobalGravitySetter" type="Node" parent="."]
+[node name="GlobalGravitySetter" type="Node" parent="." unique_id=1021818479]
 script = ExtResource("1_5eiqc")
 gravity = 0.0

@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlghvb75soq20"]
+[gd_scene format=3 uid="uid://dlghvb75soq20"]
 
 [ext_resource type="PackedScene" uid="uid://x3xvjqrm0hsu" path="res://examples/omi_environment_sky/gltf/default_physical_sky.gltf" id="1_ics3h"]
 
-[node name="DefaultPhysicalSkyTest" type="Node3D"]
+[node name="DefaultPhysicalSkyTest" type="Node3D" unique_id=1373793685]
 
-[node name="DefaultPhysicalSky" parent="." instance=ExtResource("1_ics3h")]
+[node name="DefaultPhysicalSky" parent="." unique_id=467132065 instance=ExtResource("1_ics3h")]

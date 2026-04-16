@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://nkwkk4uwowrr"]
+[gd_scene format=4 uid="uid://nkwkk4uwowrr"]
 
-[ext_resource type="Script" uid="uid://digm3y42mikqe" path="res://addons/omi_extensions/vehicle/nodes/piloted_vehicle_body_3d.gd" id="1_umllk"]
-[ext_resource type="Script" uid="uid://bjl5ks1qrha5b" path="res://addons/omi_extensions/vehicle/nodes/vehicle_hover_thruster_3d.gd" id="2_ky2er"]
-[ext_resource type="Script" uid="uid://ci1jce7fwkldv" path="res://addons/omi_extensions/vehicle/nodes/pilot_seat_3d.gd" id="3_g7xpw"]
+[ext_resource type="Script" uid="uid://dsg8y3be81je4" path="res://addons/omi_extensions/vehicle/nodes/piloted_vehicle_body_3d.gd" id="1_umllk"]
+[ext_resource type="Script" uid="uid://xuh2gymoi7h6" path="res://addons/omi_extensions/vehicle/nodes/vehicle_hover_thruster_3d.gd" id="2_ky2er"]
+[ext_resource type="Script" uid="uid://cugcftyucb03o" path="res://addons/omi_extensions/vehicle/nodes/pilot_seat_3d.gd" id="3_g7xpw"]
 [ext_resource type="Script" uid="uid://de2fci4ti5sbv" path="res://addons/omi_extensions/seat/seat_3d.gd" id="4_bgiin"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qvg40"]
@@ -50,76 +50,75 @@ shadow_mesh = SubResource("ArrayMesh_wo06w")
 [sub_resource type="BoxShape3D" id="BoxShape3D_0cslt"]
 size = Vector3(2, 2, 2)
 
-[node name="HovercraftBody" type="VehicleBody3D" node_paths=PackedStringArray("pilot_seat_node")]
+[node name="HovercraftBody" type="VehicleBody3D" unique_id=141595898 node_paths=PackedStringArray("pilot_seat_node")]
 mass = 2000.0
 center_of_mass_mode = 1
 script = ExtResource("1_umllk")
 pilot_seat_node = NodePath("PilotSeat")
 
-[node name="HovercraftCollider" type="CollisionShape3D" parent="."]
+[node name="HovercraftCollider" type="CollisionShape3D" parent="." unique_id=1566303550]
 shape = SubResource("ConvexPolygonShape3D_qvg40")
 
-[node name="HovercraftMesh" type="MeshInstance3D" parent="."]
+[node name="HovercraftMesh" type="MeshInstance3D" parent="." unique_id=1380071879]
 mesh = SubResource("ArrayMesh_a1fyh")
-skeleton = NodePath("")
 
-[node name="HoverThrusterBL" type="RayCast3D" parent="."]
+[node name="HoverThrusterBL" type="RayCast3D" parent="." unique_id=1037492374]
 transform = Transform3D(0.707107, 0.579228, -0.40558, 0, 0.573576, 0.819152, 0.707107, -0.579228, 0.40558, 1.2, -0.25, -2.1)
 target_position = Vector3(0, 0, -1000)
 script = ExtResource("2_ky2er")
 max_gimbal_radians = 0.25
 max_hover_energy = 30000.0
 
-[node name="HoverThrusterBR" type="RayCast3D" parent="."]
+[node name="HoverThrusterBR" type="RayCast3D" parent="." unique_id=669505911]
 transform = Transform3D(0.707107, -0.579228, 0.40558, 0, 0.573576, 0.819152, -0.707107, -0.579228, 0.40558, -1.2, -0.25, -2.1)
 target_position = Vector3(0, 0, -1000)
 script = ExtResource("2_ky2er")
 max_gimbal_radians = 0.25
 max_hover_energy = 30000.0
 
-[node name="HoverThrusterFL" type="RayCast3D" parent="."]
+[node name="HoverThrusterFL" type="RayCast3D" parent="." unique_id=1026466541]
 transform = Transform3D(-0.707107, 0.579228, -0.40558, 0, 0.573576, 0.819152, 0.707107, 0.579228, -0.40558, 1.2, -0.25, 2.1)
 target_position = Vector3(0, 0, -1000)
 script = ExtResource("2_ky2er")
 max_gimbal_radians = 0.25
 max_hover_energy = 30000.0
 
-[node name="HoverThrusterFR" type="RayCast3D" parent="."]
+[node name="HoverThrusterFR" type="RayCast3D" parent="." unique_id=234648320]
 transform = Transform3D(-0.707107, -0.579228, 0.40558, 0, 0.573576, 0.819152, -0.707107, 0.579228, -0.40558, -1.2, -0.25, 2.1)
 target_position = Vector3(0, 0, -1000)
 script = ExtResource("2_ky2er")
 max_gimbal_radians = 0.25
 max_hover_energy = 30000.0
 
-[node name="PassengerSeatFront" type="Area3D" parent="."]
+[node name="PassengerSeatFront" type="Area3D" parent="." unique_id=827422594]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, 0)
 script = ExtResource("4_bgiin")
 
-[node name="PassengerSeatFrontShape" type="CollisionShape3D" parent="PassengerSeatFront"]
+[node name="PassengerSeatFrontShape" type="CollisionShape3D" parent="PassengerSeatFront" unique_id=1300863775]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, 0.75)
 shape = SubResource("BoxShape3D_0cslt")
 
-[node name="PassengerSeatRearLeft" type="Area3D" parent="."]
+[node name="PassengerSeatRearLeft" type="Area3D" parent="." unique_id=1382037898]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -1.125)
 script = ExtResource("4_bgiin")
 
-[node name="PassengerSeatRearLeftShape" type="CollisionShape3D" parent="PassengerSeatRearLeft"]
+[node name="PassengerSeatRearLeftShape" type="CollisionShape3D" parent="PassengerSeatRearLeft" unique_id=1907560005]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -0.75)
 shape = SubResource("BoxShape3D_0cslt")
 
-[node name="PassengerSeatRearRight" type="Area3D" parent="."]
+[node name="PassengerSeatRearRight" type="Area3D" parent="." unique_id=296394514]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -1.125)
 script = ExtResource("4_bgiin")
 
-[node name="PassengerSeatRearRightShape" type="CollisionShape3D" parent="PassengerSeatRearRight"]
+[node name="PassengerSeatRearRightShape" type="CollisionShape3D" parent="PassengerSeatRearRight" unique_id=1567010147]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, -0.75)
 shape = SubResource("BoxShape3D_0cslt")
 
-[node name="PilotSeat" type="Area3D" parent="." node_paths=PackedStringArray("piloted_vehicle_node")]
+[node name="PilotSeat" type="Area3D" parent="." unique_id=1530414792 node_paths=PackedStringArray("piloted_vehicle_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0)
 script = ExtResource("3_g7xpw")
 piloted_vehicle_node = NodePath("..")
 
-[node name="PilotSeatShape" type="CollisionShape3D" parent="PilotSeat"]
+[node name="PilotSeatShape" type="CollisionShape3D" parent="PilotSeat" unique_id=1397905456]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 0.75)
 shape = SubResource("BoxShape3D_0cslt")
