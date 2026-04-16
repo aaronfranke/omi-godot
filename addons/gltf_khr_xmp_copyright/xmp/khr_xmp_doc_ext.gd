@@ -96,10 +96,10 @@ func _export_preserialize(gltf_state: GLTFState) -> Error:
 	return OK
 
 
-func _export_node(gltf_state: GLTFState, gltf_node: GLTFNode, node_json: Dictionary, node: Node) -> Error:
-	if not node.has_meta(&"dcmi_license_metadata"):
+func _export_node(gltf_state: GLTFState, gltf_node: GLTFNode, node_json: Dictionary, godot_node: Node) -> Error:
+	if not godot_node.has_meta(&"dcmi_license_metadata"):
 		return OK
-	var dcmi_data: DCMILicenseMetadata = node.get_meta(&"dcmi_license_metadata")
+	var dcmi_data: DCMILicenseMetadata = godot_node.get_meta(&"dcmi_license_metadata")
 	var dcmi_dict = dcmi_data.to_dictionary()
 	if dcmi_dict.is_empty():
 		return OK

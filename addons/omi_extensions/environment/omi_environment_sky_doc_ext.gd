@@ -3,7 +3,7 @@ class_name GLTFDocumentExtensionOMIEnvironmentSky
 extends GLTFDocumentExtension
 
 
-@export var export_environment: bool = true
+@export var export_environment: bool = false
 
 
 # Import process.
